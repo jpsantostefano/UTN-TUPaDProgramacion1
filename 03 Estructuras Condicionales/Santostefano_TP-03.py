@@ -146,3 +146,46 @@ elif magnitud >= 7:
 else:
     print("No es una magnitud valida")
 
+# Ejercicio 10
+# Utilizando la información aportada en la siguiente tabla sobre las estaciones del año
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes del año es y qué día es. 
+# El programa deberá utilizar esa información para imprimir por pantalla si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+
+hemisferio = input("¿En qué hemisferio estas? ('N' para Norte / 'S' para Sur): ")
+mes = int(input("¿Qué mes es? (1-12): "))
+dia = int(input("¿Qué día es? (1-31): "))
+
+if (mes == 12 and dia >= 21) or (mes == 1) or (mes == 2) or (mes == 3 and dia <= 20):
+    # Periodo: 21 dic - 20 mar
+    if hemisferio.upper() == 'N':
+        estacion = "invierno"
+    else:
+        estacion = "verano"
+        
+elif (mes == 3 and dia >= 21) or (mes == 4) or (mes == 5) or (mes == 6 and dia <= 20):
+    # Periodo: 21 mar - 20 jun
+    if hemisferio.upper() == 'N':
+        estacion = "primavera"
+    else:
+        estacion = "otoño"
+        
+elif (mes == 6 and dia >= 21) or (mes == 7) or (mes == 8) or (mes == 9 and dia <= 20):
+    # Periodo: 21 jun - 20 sep
+    if hemisferio.upper() == 'N':
+        estacion = "verano"
+    else:
+        estacion = "invierno"
+        
+elif (mes == 9 and dia >= 21) or (mes == 10) or (mes == 11) or (mes == 12 and dia <= 20):
+    # Periodo: 21 sep - 20 dic
+    if hemisferio.upper() == 'N':
+        estacion = "otoño"
+    else:
+        estacion = "primavera"
+        
+else:
+    estacion = "desconocida"
+
+print("Te encontras en la estacion de", estacion)
+
