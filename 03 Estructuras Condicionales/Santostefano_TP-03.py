@@ -47,5 +47,54 @@ elif edad >= 18 and edad < 30:
 else:
     print("Usted es Adulto/a:")
 
+# Ejercicio 5:
+# Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres (incluyendo 8 y 14). 
+# Si el usuario ingresa una contraseña de longitud adecuada, imprimir por en pantalla el mensaje "Ha ingresado una contraseña correcta"; 
+# en caso contrario, imprimir por pantalla "Por favor, ingrese una contraseña de entre 8 y 14 caracteres". 
+# Nota: investigue el uso de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal como una lista o un string.
 
+contraseña = input("Ingrese su contraseña: ")
 
+if len(contraseña) >= 8 and len(contraseña) <= 14:
+    print("Ha ingresado una contraseña correcta")
+else:
+    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres.")
+
+# Ejercicio 6:
+# Escribir un programa que tome la lista numeros_aleatorios, calcule su moda,su mediana y su media y las compare para determinar si hay sesgo positivo, 
+# negativo o no hay sesgo. Imprimir el resultado por pantalla.
+from statistics import mode, median, mean
+import random
+
+numeros_aleatorios = [random.randint(1,100) for i in range(50)]
+
+moda = mode(numeros_aleatorios)
+mediana = median(numeros_aleatorios)
+media = mean(numeros_aleatorios)
+
+if media > mediana and mediana > moda:
+    sesgo = "Sesgo positivo o a la derecha"
+elif media < mediana and mediana < moda:
+    sesgo = "Sesgo negativo o a la izquierda"
+else:
+    sesgo = "Sin sesgo"
+
+print("Lista de números:", numeros_aleatorios)
+print(f"Moda: {moda}")
+print(f"Mediana: {mediana}")
+print(f"Media: {media:.2f}")
+print(f"Resultado: {sesgo}")
+
+# Ejercicio 7:
+# Escribir un programa que solicite una frase o palabra al usuario. 
+# Si el string ingresado termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por pantalla; 
+# en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por pantalla.
+
+frase = input("Ingrese una palabra o frase: ")
+
+if frase[-1] in "aeiouAEIOU":
+    print(frase + "!")
+else:
+    print(frase)
+
+# Ejercicio 8:
