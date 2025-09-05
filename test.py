@@ -1,9 +1,7 @@
+num = ""
 contador = 0
+while num != 0:
+    num = int(input("Ingrese un numero: "))
+    contador = contador + num
 
-num1 = int(input("Ingrese un numero: "))
-num2 = int(input("Ingrese otro numero: "))
-
-for i in range(num1,num2+1):
-    contador = contador + i
-
-print(contador)
+print("La suma de los numeros ingresados es de",contador)

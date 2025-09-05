@@ -27,4 +27,15 @@ for i in range(num1,num2+1):
 
 print(contador)
 
+# 4) Elabora un programa que permita al usuario ingresar números enteros y los sume en secuencia. 
+# El programa debe detenerse y mostrar el total acumulado cuando el usuario ingrese un 0.
+
+num = ""
+contador = 0
+while num != 0:
+    num = int(input("Ingrese un numero: "))
+    contador = contador + num
+
+print("La suma de los numeros ingresados es de",contador)
+
 
