@@ -1,10 +1,26 @@
 # 7) Crea un programa que calcule la suma de todos los números comprendidos entre 0 y un número entero positivo indicado por el usuario.
 
-suma = 0
-num = int(input("Ingrese un numero entero positivo: "))
+contador = 0
+pares = 0
+impares = 0
+positivo = 0
+negativo = 0
 
-for i in range(0,num+1):
-    suma = suma + i
+while contador < 100:
+    num = int(input("Ingrese un numero (0 para terminar): "))
+    if num == 0:
+        break
+    else:
+        if num % 2 == 0:
+            pares = pares + 1
+        else:
+            impares = impares + 1
+        if num > 0:
+            positivo = positivo + 1
+        else:
+            negativo = negativo + 1
 
-print("La suma de todos los numeros comprendidos entre 0 y",num,"es igual a",suma)
-
+print("Pares:",pares)
+print("Impares:",impares)
+print("Positivos:",positivo)
+print("Negativos:",negativo)
