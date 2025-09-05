@@ -86,6 +86,7 @@ while contador < 100:
     if num == 0:
         break
     else:
+        contador = contador + 1
         if num % 2 == 0:
             pares = pares + 1
         else:
@@ -94,8 +95,29 @@ while contador < 100:
             positivo = positivo + 1
         else:
             negativo = negativo + 1
+    
 
 print("Pares:",pares)
 print("Impares:",impares)
 print("Positivos:",positivo)
 print("Negativos:",negativo)
+
+# 9) Elabora un programa que permita al usuario ingresar 100 números enteros y luego calcule la
+#media de esos valores. (Nota: puedes probar el programa con una cantidad menor, pero debe
+#poder procesar 100 números cambiando solo un valor).
+
+contador = 0
+suma = 0
+
+while contador < 100:
+    num = int(input("Ingrese un numero (0 para terminar): "))
+    if num == 0:
+        break
+    else:
+        suma = suma + num
+        contador = contador + 1
+    
+media = suma / contador
+
+print("La media es de:",media)
+
