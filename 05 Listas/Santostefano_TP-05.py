@@ -69,3 +69,20 @@ for i in datos:
         sin_repetir.append(i)
 
 print(sin_repetir)
+
+#5 Crear una lista con los nombres de 8 estudiantes presentes en clase.
+# Preguntar al usuario si queire agregar un nuevo estudiante o eliminar uno existente
+# Mostrar la lista final actualizada
+
+nombres = ["Juan", "Fernanda", "Maria", "Pedro", "Martin", "Daira", "Zoe", "Lucas"]
+
+print(nombres)
+respuesta = input("Desea agregar (A) o eliminar (E) un alumno existente?: ")
+if respuesta.upper() == "A":
+    nuevo = input("Ingrese el nombre del estudiante a agregar: ")
+    nombres.append(nuevo)
+elif respuesta.upper() == "E":
+    eliminar = input("Ingrese el nombre del estudiante que desea eliminar: ")
+    nombres.delete(eliminar)
+
+print("La lista actualizada es:",nombres)
