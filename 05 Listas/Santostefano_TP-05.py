@@ -86,3 +86,10 @@ elif respuesta.upper() == "E":
     nombres.delete(eliminar)
 
 print("La lista actualizada es:",nombres)
+
+#6 Dada una lista con 7 numeros, rotar todos los elementos una posicion hacia la derecha (el ultimo pasa a ser el primero)
+lista = [1,2,3,4,5,6,7]
+
+lista_rotada = [lista[-1]] + lista[:-1]
+print(lista_rotada)
+
