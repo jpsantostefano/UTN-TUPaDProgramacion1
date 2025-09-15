@@ -1,31 +1,30 @@
-temperaturas = [
-    [15, 25],
-    [14, 24],
-    [16, 26],
-    [13, 23],
-    [17, 27],
-    [15, 25],
-    [16, 28]
+# Lengua, Matematica, Historia
+
+notas = [
+    [7, 8, 6],
+    [9, 7, 8],
+    [6, 5, 7],
+    [8, 9, 9],
+    [7, 6, 8]
 ]
 
-dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"]
-minima = 0
-maxima = 0
-amplitud = 0
-amplitud_max = 0
-dia_amplitud = 0
+suma_lengua = 0
+suma_matematica = 0
+suma_historia = 0
 
-for i in range(len(temperaturas)):
-    minima = minima + temperaturas[i][0]
-    maxima = maxima + temperaturas[i][1]
-    amplitud = temperaturas[i][1] - temperaturas[i][0]
+for i in range(len(notas)):
+    promedio_estudiante = (notas[i][0] + notas[i][1] + notas[i][2]) / 3
+    print(f"El promedio del estudiante {i+1} es de {promedio_estudiante:.2f}")
+    suma_lengua += notas[i][0]
+    suma_matematica += notas[i][0]
+    suma_historia += notas[i][0]
 
-    if amplitud > amplitud_max:
-        amplitud_max = amplitud
-        dia_amplitud = i
+promedio_lengua = suma_lengua /5
+promedio_matematica = suma_matematica / 5
+promedio_historia = suma_historia / 5
 
-promedio_min = minima / len(temperaturas)
-promedio_max = maxima / len(temperaturas)
-print(f"El promedio de las temperaturas minimas es de: {promedio_min:.1f} grados")
-print(f"El promedio de las temperaturas maximas es de: {promedio_max:.1f} grados")
-print(f"La amplitud maxima fue de {amplitud_max} grados el dia {dias[dia_amplitud]}")
+print(f"El promedio de Lengua es de {promedio_lengua:.2f}")
+print(f"El promedio de Matematica es de {promedio_matematica:.2f}")
+print(f"El promedio de Historia es de {promedio_historia:.2f}")
+
+
