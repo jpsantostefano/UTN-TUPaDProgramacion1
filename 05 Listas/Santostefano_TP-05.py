@@ -35,3 +35,26 @@ eliminar_producto = input("Que producto deseas eliminar de la lista?")
 lista_productos.remove(eliminar_producto)
 
 print(sorted(lista_productos))
+
+#3 Generar una lista con 15 numeros enteros al azar entre 1 y 100.
+# Crear una lista con los pares y otra con los impares
+# Mostrar cuantos numeros tiene cada lista
+import random
+
+lista = []
+pares = []
+impares = []
+for i in range(15):
+    lista.append(random.randint(1,100))
+
+for i in lista:
+    if i % 2 == 0:
+        pares.append(i)
+    else:
+        impares.append(i)
+
+cant_impar = len(impares)
+cant_par = len(pares)
+print("Los 15 numeros seleccionados al azar del 1 al 100 son:",lista)
+print("La cantidad de numeros impares es:",cant_impar,".Estos son:",impares)
+print("Los cantidad de numeros pares es:",cant_par,". Estos son: ",pares)
