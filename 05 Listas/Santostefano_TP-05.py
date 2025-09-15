@@ -23,3 +23,15 @@ print("La nota mas alta es:",alta)
 #2 Pedir al usuario que cargue 5 productos en una lista
 # Mostrar la lista ordenada alfabeticamente. Investigue el uso del metodo sorted*()
 # Preguntar al usuario que producto desea eliminar y actualizar la lista.
+
+lista_productos = []
+for i in range(5):
+    producto = input("Ingrese un producto: ")
+    lista_productos.append(producto)
+
+print(sorted(lista_productos))
+
+eliminar_producto = input("Que producto deseas eliminar de la lista?")
+lista_productos.remove(eliminar_producto)
+
+print(sorted(lista_productos))
