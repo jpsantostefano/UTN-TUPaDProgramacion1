@@ -1,30 +1,34 @@
-# Lengua, Matematica, Historia
-
-notas = [
-    [7, 8, 6],
-    [9, 7, 8],
-    [6, 5, 7],
-    [8, 9, 9],
-    [7, 6, 8]
+tablero = [
+    ["-","-","-"],
+    ["-","-","-"],
+    ["-","-","-"]
 ]
 
-suma_lengua = 0
-suma_matematica = 0
-suma_historia = 0
+print("***Tablero Inicial***")
+for f in tablero:
+        print(" ".join(f))
+print()
 
-for i in range(len(notas)):
-    promedio_estudiante = (notas[i][0] + notas[i][1] + notas[i][2]) / 3
-    print(f"El promedio del estudiante {i+1} es de {promedio_estudiante:.2f}")
-    suma_lengua += notas[i][0]
-    suma_matematica += notas[i][0]
-    suma_historia += notas[i][0]
+jugador = "X"
+jugadas = 0
 
-promedio_lengua = suma_lengua /5
-promedio_matematica = suma_matematica / 5
-promedio_historia = suma_historia / 5
+while jugadas < 9:
+    print("Turno del jugador:", jugador)
+    fila = int(input("Ingrese numero de fila (1-3): ")) -1
+    columna = int(input("Ingrese numero de columna (1-3): ")) -1
 
-print(f"El promedio de Lengua es de {promedio_lengua:.2f}")
-print(f"El promedio de Matematica es de {promedio_matematica:.2f}")
-print(f"El promedio de Historia es de {promedio_historia:.2f}")
+    tablero[fila][columna] = jugador
+    jugadas += 1
 
+    for f in tablero:
+        print(" ".join(f))
+    print()
+
+    if jugador == "X":
+        jugador = "O"
+    else:
+        jugador = "X"
+
+print("Juego terminado!")
+    
 

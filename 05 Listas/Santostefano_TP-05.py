@@ -162,3 +162,40 @@ print(f"El promedio de Lengua es de {promedio_lengua:.2f}")
 print(f"El promedio de Matematica es de {promedio_matematica:.2f}")
 print(f"El promedio de Historia es de {promedio_historia:.2f}")
 
+# 9 Representar un tablero de Ta-Te-Ti como una lista de listas (3x3)
+# Inicializarlo con guinoes "-" representando casillas vacias.
+# Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O"
+# Mostrar el tablero despues de cada jugada.
+
+tablero = [
+    ["-","-","-"],
+    ["-","-","-"],
+    ["-","-","-"]
+]
+
+print("***Tablero Inicial***")
+for f in tablero:
+        print(" ".join(f))
+print()
+
+jugador = "X"
+jugadas = 0
+
+while jugadas < 9:
+    print("Turno del jugador:", jugador)
+    fila = int(input("Ingrese numero de fila (1-3): ")) -1
+    columna = int(input("Ingrese numero de columna (1-3): ")) -1
+
+    tablero[fila][columna] = jugador
+    jugadas += 1
+
+    for f in tablero:
+        print(" ".join(f))
+    print()
+
+    if jugador == "X":
+        jugador = "O"
+    else:
+        jugador = "X"
+
+print("Juego terminado!")
