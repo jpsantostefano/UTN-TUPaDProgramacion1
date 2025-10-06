@@ -1,4 +1,7 @@
-def segundos_a_horas(segundos):
-    return segundos / 3600
+def tabla_multiplicar(numero):
+    print(f"Tabla de multiplicar del {numero}")
+    for i in range(1,11):
+        print(f"{numero} X {i} = {numero*i}")
 
-print(segundos_a_horas(float(input("Ingrese la cantidad de segundos: "))))
+numero = int(input("Ingrese un numero: "))
+tabla_multiplicar(numero)

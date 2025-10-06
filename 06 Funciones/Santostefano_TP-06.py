@@ -51,9 +51,16 @@ horas = segundos_a_horas(segundos)
 
 print(f"{segundos} segundos equivalen a {horas:.2f} horas")
 
-# 6. Crear una función llamada tabla_multiplicar(numero) que reciba un
-# número como parámetro y imprima la tabla de multiplicar de ese
-# número del 1 al 10. Pedir al usuario el número y llamar a la función.
+# 6. Crear una función llamada tabla_multiplicar(numero) que reciba un número como parámetro y imprima la tabla de multiplicar de ese número del 1 al 10.
+# Pedir al usuario el número y llamar a la función.
+def tabla_multiplicar(numero):
+    print(f"Tabla de multiplicar del {numero}")
+    for i in range(1,11):
+        print(f"{numero} X {i} = {numero*i}")
+
+numero = int(input("Ingrese un numero: "))
+tabla_multiplicar(numero)
+
 # 7. Crear una función llamada operaciones_basicas(a, b) que reciba
 # dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
 # 8. Crear una función llamada calcular_imc(peso, altura) que reciba el
