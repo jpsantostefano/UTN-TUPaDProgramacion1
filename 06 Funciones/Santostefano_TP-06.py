@@ -11,15 +11,19 @@ def saludar_usuario(nombre):
 
 saludar_usuario(input("Ingrese nombre de usuario: "))
 
+# 3. Crear una función llamada informacion_personal(nombre, apellido,edad, residencia) que reciba cuatro parámetros e imprima: 
+# “Soy[nombre] [apellido], tengo [edad] años y vivo en [residencia]”. Pedir los datos al usuario y llamar a esta función con los valores ingresados.
+def informacion_personal(nombre, apellido, edad, residencia):
+    print(f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}")
 
-# 3. Crear una función llamada informacion_personal(nombre, apellido,
-# edad, residencia) que reciba cuatro parámetros e imprima: “Soy
-# [nombre] [apellido], tengo [edad] años y vivo en [residencia]”. Pedir los datos al usuario y llamar a esta función con los valores ingresados.
-# 1
-# Programación I
-# TECNICATURA UNIVERSITARIA
-# EN PROGRAMACIÓN
-# A DISTANCIA
+nombre = input("Ingrese su nombre: ")
+apellido = input("Ingrese su apellido: ")
+edad = input("Ingrese su edad: ")
+residencia = input("Ingrese su lugar de residencia: ")
+
+informacion_personal(nombre,apellido,edad,residencia)
+
+
 # 4. Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
 # 5. Crear una función llamada segundos_a_horas(segundos) que reciba
 # una cantidad de segundos como parámetro y devuelva la cantidad
