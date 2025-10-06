@@ -86,9 +86,17 @@ if resultados[3] is not None:
 else:
     print("No se puede dividir por cero")
 
-# 8. Crear una función llamada calcular_imc(peso, altura) que reciba el
-# peso en kilogramos y la altura en metros, y devuelva el índice de
-# masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
+# 8. Crear una función llamada calcular_imc(peso, altura) que reciba el peso en kilogramos y la altura en metros, y devuelva el índice de masa corporal (IMC). 
+# Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
+def caclular_imc(peso,altura):
+    return peso / (altura ** 2)
+
+peso = float(input("Ingrese su peso en kilogramos: "))
+altura = float(input("Ingrese su altura en metros: "))
+
+imc = caclular_imc(peso,altura)
+print(f"Tu indice de masa corporal es de: {imc:.2f}")
+
 # 9. Crear una función llamada celsius_a_fahrenheit(celsius) que reciba
 # una temperatura en grados Celsius y devuelva su equivalente en
 # Fahrenheit. Pedir al usuario la temperatura en Celsius y mostrar el
