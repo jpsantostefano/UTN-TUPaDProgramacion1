@@ -61,8 +61,31 @@ def tabla_multiplicar(numero):
 numero = int(input("Ingrese un numero: "))
 tabla_multiplicar(numero)
 
-# 7. Crear una función llamada operaciones_basicas(a, b) que reciba
-# dos números como parámetros y devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
+# 7. Crear una función llamada operaciones_basicas(a, b) que reciba dos números como parámetros y 
+# devuelva una tupla con el resultado de sumarlos, restarlos, multiplicarlos y dividirlos. Mostrar los resultados de forma clara.
+def operaciones_basicas(a,b):
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    if b != 0:
+        division = a / b
+    else:
+        division = None
+    return (suma, resta, multiplicacion, division)
+
+num1 = int(input("Ingrese un numero entero: "))
+num2 = int(input("Ingrese otro numero entero: "))
+
+resultados = operaciones_basicas(num1,num2)
+
+print(f"{num1} + {num2} = {resultados[0]}")
+print(f"{num1} - {num2} = {resultados[1]}")
+print(f"{num1} X {num2} = {resultados[2]}")
+if resultados[3] is not None:
+    print(f"{num1} / {num2} = {resultados[3]}")
+else:
+    print("No se puede dividir por cero")
+
 # 8. Crear una función llamada calcular_imc(peso, altura) que reciba el
 # peso en kilogramos y la altura en metros, y devuelva el índice de
 # masa corporal (IMC). Solicitar al usuario los datos y llamar a la función para mostrar el resultado con dos decimales.
