@@ -23,8 +23,21 @@ residencia = input("Ingrese su lugar de residencia: ")
 
 informacion_personal(nombre,apellido,edad,residencia)
 
+# 4. Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. 
+# calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. 
+# Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
+import math
+def calcular_area_circulo(radio):
+    return math.pi * radio ** 2
 
-# 4. Crear dos funciones: calcular_area_circulo(radio) que reciba el radio como parámetro y devuelva el área del círculo. calcular_perimetro_circulo(radio) que reciba el radio como parámetro y devuelva el perímetro del círculo. Solicitar el radio al usuario y llamar ambas funciones para mostrar los resultados.
+def calcular_perimetro_circulo(radio):
+    return 2 * math.pi * radio
+
+radio = float(input("Ingrese el radio: "))
+
+print(calcular_area_circulo(radio))
+print(calcular_perimetro_circulo(radio))
+
 # 5. Crear una función llamada segundos_a_horas(segundos) que reciba
 # una cantidad de segundos como parámetro y devuelva la cantidad
 # de horas correspondientes. Solicitar al usuario los segundos y mostrar el resultado usando esta función.
