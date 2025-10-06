@@ -1,7 +1,10 @@
-def celsius_a_fahrenheit(celsius):
-    return celsius * 9/5 + 32
+def calcular_promedio(a,b,c):
+    return (a+b+c) / 3
 
-celsius = float(input("Ingrese la temperatura en grados Celsius: "))
-fahrenheit = celsius_a_fahrenheit(celsius)
+nota1 = float(input("Ingrese la primera nota: "))
+nota2 = float(input("Ingrese la segunda nota: "))
+nota3 = float(input("Ingrese la tercera nota: "))
 
-print(f"La temperatura {celsius} grados celsius en Fahrenheit es de: {fahrenheit}")
+promedio = calcular_promedio(nota1, nota2, nota3)
+
+print(f"El promedio total es de: {promedio}")
