@@ -1,8 +1,7 @@
-def caclular_imc(peso,altura):
-    return peso / (altura ** 2)
+def celsius_a_fahrenheit(celsius):
+    return celsius * 9/5 + 32
 
-peso = float(input("Ingrese su peso en kilogramos: "))
-altura = float(input("Ingrese su altura en metros"))
+celsius = float(input("Ingrese la temperatura en grados Celsius: "))
+fahrenheit = celsius_a_fahrenheit(celsius)
 
-imc = caclular_imc(peso,altura)
-print(f"Tu indice de masa corporal es de: {imc:.2f}")
+print(f"La temperatura {celsius} grados celsius en Fahrenheit es de: {fahrenheit}")
