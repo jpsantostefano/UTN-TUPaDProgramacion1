@@ -11,4 +11,6 @@ precios_frutas["Banana"] = 1330
 precios_frutas["Manzana"] = 1700
 precios_frutas["Melón"] = 2800
 
+# Ejercicio 3
+frutas_sin_precio = list(precios_frutas.keys())
 
