@@ -1,14 +1,13 @@
-# Ejercicio 4
-contactos = {}
-print("Ingrese 5 contactos con su nombre y telefono")
-for i in range(5):
-    nombre = input(f"Nombre del contacto {i+1}: ")
-    contactos[nombre] = None
-    telefono = input("Numero telefonico: ")
-    contactos[nombre] = telefono
+recuento = {}
+frase = input("Ingrese una frase: ")
 
-nombre = input("Ingresa nombre de contacto para ver si existe: ")
-if nombre in contactos.keys():
-    print(f"El telefono de {nombre} es {contactos[nombre]}")
-else:
-    print("El contacto ingresado no existe")
+for palabra in frase.split():
+    if palabra not in recuento.keys():
+        recuento[palabra] = 1
+    else:
+        recuento[palabra] += 1
+
+palabras_unicas = set(frase.split())
+
+print(f"Palabras unicas: {palabras_unicas}")
+print(f"Recuento: {recuento}")
