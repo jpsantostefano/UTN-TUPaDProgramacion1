@@ -1,13 +1,16 @@
-recuento = {}
-frase = input("Ingrese una frase: ")
+alumnos = {}
 
-for palabra in frase.split():
-    if palabra not in recuento.keys():
-        recuento[palabra] = 1
-    else:
-        recuento[palabra] += 1
+for i in range(3):
+    nombre = input(f"Ingrese nombre de alumno {i+1}: ")
+    notas = []
+    
+    for x in range(3):
+        nota = float(input(f"Ingrese una nota {x+1}: "))
+        notas.append(nota)
+    alumnos[nombre] = tuple(notas)
 
-palabras_unicas = set(frase.split())
+for nombre, notas in alumnos.items():
+    promedio = sum(notas) / len(notas)
+    print(f"El promedio de {nombre} es {promedio:.2f}")
 
-print(f"Palabras unicas: {palabras_unicas}")
-print(f"Recuento: {recuento}")
+
