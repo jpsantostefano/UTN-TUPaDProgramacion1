@@ -1,16 +1,18 @@
-alumnos = {}
+parcial1 = {"Juan", "Maria", "Pedro", "Gabriel"}
+parcial2 = {"Josefina", "Taylor", "Juan", "Gabriel"}
 
-for i in range(3):
-    nombre = input(f"Ingrese nombre de alumno {i+1}: ")
-    notas = []
-    
-    for x in range(3):
-        nota = float(input(f"Ingrese una nota {x+1}: "))
-        notas.append(nota)
-    alumnos[nombre] = tuple(notas)
+ambos_aprobados = []
+uno_aprobado = []
 
-for nombre, notas in alumnos.items():
-    promedio = sum(notas) / len(notas)
-    print(f"El promedio de {nombre} es {promedio:.2f}")
+for nombre1 in parcial1:
+    for nombre2 in parcial2:
+        if nombre1 in parcial2:
+            ambos_aprobados.append(nombre1)
+        if nombre2 not in parcial1:
+            uno_aprobado.append(nombre2)
 
+total = list(set(list(parcial1) + uno_aprobado))
 
+print(f"Alumnos que aprboaron ambos parciales: {ambos_aprobados}")
+print(f"Alumnos que aprobaron al menos un parcial: {uno_aprobado}")
+print(f"Total de estudiantes que aprobaron al menos un parcial: {total}")
