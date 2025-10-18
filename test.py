@@ -1,18 +1,26 @@
-parcial1 = {"Juan", "Maria", "Pedro", "Gabriel"}
-parcial2 = {"Josefina", "Taylor", "Juan", "Gabriel"}
+productos = {
+    "banana": 10,
+    "manzana": 5,
+    "naranja": 3
+    }
 
-ambos_aprobados = []
-uno_aprobado = []
+consulta = input("Ingrese un producto para saber su stock: ").lower()
 
-for nombre1 in parcial1:
-    for nombre2 in parcial2:
-        if nombre1 in parcial2:
-            ambos_aprobados.append(nombre1)
-        if nombre2 not in parcial1:
-            uno_aprobado.append(nombre2)
+if consulta in productos:
+    print(f"{consulta}: {productos[consulta]} unidades")
 
-total = list(set(list(parcial1) + uno_aprobado))
+    modificar = input("Deseas agregar unidades? (s/n): ").lower()
+    if modificar == "s":
+        unidades = int(input("Cuantas unidades deseas agregar al stock?: "))
+        productos[consulta] += unidades
+        print("Stock actualizado con exito!")
+        print(f"{consulta}: {productos[consulta]} unidades")
 
-print(f"Alumnos que aprboaron ambos parciales: {ambos_aprobados}")
-print(f"Alumnos que aprobaron al menos un parcial: {uno_aprobado}")
-print(f"Total de estudiantes que aprobaron al menos un parcial: {total}")
+else:
+    print(f"No hay stock de {consulta}")
+    agregar = input("Deseas agregar este producto? (s/n): ").lower()
+    if agregar == "s":
+        cantidad = int(input(f"Ingresa la cantidad que deseas agregar de {consulta} al stock: "))
+        productos[consulta] = cantidad
+        print("Producto agregado con exito!")
+
