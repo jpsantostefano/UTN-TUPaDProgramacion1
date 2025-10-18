@@ -1,26 +1,19 @@
-productos = {
-    "banana": 10,
-    "manzana": 5,
-    "naranja": 3
-    }
+agenda = {
+    ("lunes", "10:00"): "Reunion",
+    ("martes", "15:00"): "Clase de Ingles"
+}
 
-consulta = input("Ingrese un producto para saber su stock: ").lower()
-
-if consulta in productos:
-    print(f"{consulta}: {productos[consulta]} unidades")
-
-    modificar = input("Deseas agregar unidades? (s/n): ").lower()
-    if modificar == "s":
-        unidades = int(input("Cuantas unidades deseas agregar al stock?: "))
-        productos[consulta] += unidades
-        print("Stock actualizado con exito!")
-        print(f"{consulta}: {productos[consulta]} unidades")
-
-else:
-    print(f"No hay stock de {consulta}")
-    agregar = input("Deseas agregar este producto? (s/n): ").lower()
-    if agregar == "s":
-        cantidad = int(input(f"Ingresa la cantidad que deseas agregar de {consulta} al stock: "))
-        productos[consulta] = cantidad
-        print("Producto agregado con exito!")
-
+dia = input("Ingrese el dia que desea consultar: ").lower()
+for x in agenda:
+    if x[0] == dia:
+        hora = input("Ingrese un horario (hh:mm): ")
+        if x[1] == hora:
+            print(f"Evento: {agenda[x]}")
+            break
+        else:
+            print("No hay eventos para la hora ingresada")
+            break
+    else:
+        print("No hay eventos para el dia ingresado")
+        break
+    
