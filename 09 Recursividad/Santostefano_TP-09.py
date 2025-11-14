@@ -11,7 +11,7 @@ for i in range(1, numero + 1):
     resultado = factorial(i)
     print(f"Factorial de {i} es: {resultado}")
 
-#Ejercicio 2
+# Ejercicio 2
 def fibonacci(pos):
     if pos == 0:
         return 0
@@ -27,3 +27,15 @@ for i in range(posicion + 1):
     resultado = fibonacci(i)
     print(f"Posición {i}: {resultado}")
 
+# Ejercicio 3
+def potencia(base, exp):
+    if exp == 0:
+        return 1
+    else:
+        return base * potencia(base, exp - 1)
+
+base = int(input("Ingrese la base: "))
+exponente = int(input("Ingrese el exponente: "))
+
+resultado = potencia(base, exponente)
+print(f"{base} elevado a {exponente} = {resultado}")
