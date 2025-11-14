@@ -1,0 +1,4 @@
+carne,10000,3
+leche,1000,5
+arroz,750,1
+Yerba,120,4

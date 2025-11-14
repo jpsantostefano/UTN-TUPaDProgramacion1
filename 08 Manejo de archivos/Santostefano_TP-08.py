@@ -10,3 +10,11 @@ with open("productos.txt", "r") as productos:
         linea = linea.strip()
         nombre,precio,cantidad = linea.split(",")
         print(f"Productos: {nombre} | Precio: ${precio} | Cantidad: {cantidad}")
+
+# Ejercicio 3
+nombre = input("Ingrese el nombre del producto: ")
+precio = input("Ingrese el precio del producto: ")
+cantidad = input("Ingrese la cantidad del producto: ")
+
+with open("productos.txt", "a") as productos:
+    productos.write(f"{nombre},{precio},{cantidad}\n")
