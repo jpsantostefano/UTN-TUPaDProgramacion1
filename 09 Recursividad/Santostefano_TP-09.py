@@ -91,3 +91,20 @@ bloques_base = int(input("Ingrese el número de bloques en el nivel base: "))
 
 resultado = contar_bloques(bloques_base)
 print(f"El total de bloques necesarios para la pirámide es: {resultado}")
+
+# Ejercicio 8
+def contar_digito(numero, digito):
+    if numero == 0:
+        return 0
+    else:
+        ultimo_digito = numero % 10
+        if ultimo_digito == digito:
+            return 1 + contar_digito(numero // 10, digito)
+        else:
+            return contar_digito(numero // 10, digito)
+
+numero = int(input("Ingrese un número entero positivo: "))
+digito = int(input("Ingrese el dígito a contar (0-9): "))
+
+resultado = contar_digito(numero, digito)
+print(f"El dígito {digito} aparece {resultado} veces en el número {numero}")
