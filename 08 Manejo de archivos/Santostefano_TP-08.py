@@ -33,3 +33,17 @@ with open("productos.txt", "r") as archivo:
         }
         productos.append(producto)
 
+# Ejercicio 5
+nombre_buscar = input("Ingrese el nombre del producto a buscar: ")
+encontrado = False
+
+for producto in productos:
+    if producto["nombre"].lower() == nombre_buscar.lower():
+        print(f"Producto encontrado: {producto}")
+        encontrado = True
+        break
+
+if not encontrado:
+    print(f"El producto '{nombre_buscar}' no se encuentra en la lista")
+
+
