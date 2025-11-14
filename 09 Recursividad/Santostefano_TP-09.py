@@ -54,3 +54,16 @@ numero = int(input("Ingrese un número decimal: "))
 resultado = decimal_a_binario(numero)
 print(f"{numero} en binario es: {resultado}")
 
+# Ejercicio 5
+def es_palindrome(palabra):
+    if len(palabra) <= 1:
+        return True
+    elif palabra[0] != palabra[-1]:
+        return False
+    else:
+        return es_palindrome(palabra[1:-1])
+
+palabra = input("Ingrese una palabra sin espacios ni tildes: ").lower()
+
+resultado = es_palindrome(palabra)
+print(f"¿'{palabra}' es un palíndromo? {resultado}")
