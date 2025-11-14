@@ -18,3 +18,18 @@ cantidad = input("Ingrese la cantidad del producto: ")
 
 with open("productos.txt", "a") as productos:
     productos.write(f"{nombre},{precio},{cantidad}\n")
+
+# Ejercicio 4
+productos = []
+
+with open("productos.txt", "r") as archivo:
+    for linea in archivo:
+        linea = linea.strip()
+        nombre, precio, cantidad = linea.split(",")
+        producto = {
+            "nombre": nombre,
+            "precio": float(precio),
+            "cantidad": int(cantidad)
+        }
+        productos.append(producto)
+
