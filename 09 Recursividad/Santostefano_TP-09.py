@@ -79,3 +79,15 @@ numero = int(input("Ingrese un número entero positivo: "))
 
 resultado = suma_digitos(numero)
 print(f"La suma de los dígitos de {numero} es: {resultado}")
+
+# Ejercicio 7
+def contar_bloques(n):
+    if n == 1:
+        return 1
+    else:
+        return n + contar_bloques(n - 1)
+
+bloques_base = int(input("Ingrese el número de bloques en el nivel base: "))
+
+resultado = contar_bloques(bloques_base)
+print(f"El total de bloques necesarios para la pirámide es: {resultado}")
